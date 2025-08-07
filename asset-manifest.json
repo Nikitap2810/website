@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.864597bd.css",
+    "main.js": "/static/js/main.683ad976.js",
+    "static/media/nir1.jpeg": "/static/media/nir1.0595ec4005587b68efb2.jpeg",
+    "static/media/nir3.jpeg": "/static/media/nir3.dd3f43d34e3691180364.jpeg",
+    "static/media/n211.jpeg": "/static/media/n211.35800ee102abbee9cd49.jpeg",
+    "static/media/n212.jpeg": "/static/media/n212.e392ca7c58c83803ef91.jpeg",
+    "static/media/nir2.jpeg": "/static/media/nir2.adcf89447e64a468cbc2.jpeg",
+    "static/media/rvl1.jpeg": "/static/media/rvl1.5837b25c84919e5a580e.jpeg",
+    "static/media/iic1.jpeg": "/static/media/iic1.44f4d900719bd238b14c.jpeg",
+    "static/media/Nikita_Patel_CV.pdf": "/static/media/Nikita_Patel_CV.4d1d13b2bf3bfead3035.pdf",
+    "static/media/oud1.jpg": "/static/media/oud1.a8cdc08d7b356faab6b9.jpg",
+    "static/media/n213.jpeg": "/static/media/n213.cfead771229728fb7109.jpeg",
+    "static/media/background.jpg": "/static/media/background.e62b48b0b9114dfc426d.jpg",
+    "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
+    "index.html": "/index.html",
+    "main.864597bd.css.map": "/static/css/main.864597bd.css.map",
+    "main.683ad976.js.map": "/static/js/main.683ad976.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.864597bd.css",
+    "static/js/main.683ad976.js"
+  ]
+}
