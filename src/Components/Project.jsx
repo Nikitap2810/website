@@ -113,11 +113,11 @@ const Projects = ({goBack}) => {
         </div>
 
       {!selectedProject ? (
-        <div className="flex flex-col overflow-y-auto">
+        <div className="flex flex-col overflow-y-auto h-[calc(100vh-4rem)]">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer m-2"
+              className="bg-white shadow-lg rounded-lg cursor-pointer m-2"
               onClick={() => handleProjectClick(project)}
             >
               <Carousel
