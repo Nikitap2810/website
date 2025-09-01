@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { User, GraduationCap, Layers, BarChart, GitBranch, Code, Terminal, Codepen, Box, ArrowLeft } from "lucide-react";
+import { User, GraduationCap, Layers, BarChart, GitBranch, Code, Terminal, Codepen, ArrowLeft } from "lucide-react";
 
 const AboutMe = ({ goBack }) => {
   const [activeTab, setActiveTab] = useState("bio");
