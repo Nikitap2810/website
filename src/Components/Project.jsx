@@ -99,89 +99,92 @@ const Projects = ({goBack}) => {
   };
 
   return (
-      <div className="h-full w-full flex items-center justify-center bg-gray-100">
-      <div className="h-full w-full bg-white shadow-lg overflow-hidden ">
-        {/* Header */}
-        <div className="bg-blue-500 text-white h-1/6 flex w-full relative items-center justify-center text-center">
-          <button
-    onClick={goBack}
-    className="text-white font-semibold text-xl flex items-center space-x-2 absolute left-4 bottom-8 "
-  >
-    <ArrowLeft size={20} />
-  </button>
-          <h1 className="text-2xl font-bold mt-4">Projects</h1>
-        </div>
+      <div className="min-h-screen w-full bg-gray-100">
+  <div className="h-full w-full bg-white shadow-lg overflow-hidden flex flex-col">
+    
+    {/* Header */}
+    <div className="bg-blue-500 text-white h-16 flex items-center justify-center relative">
+      <button
+        onClick={goBack}
+        className="text-white font-semibold text-xl flex items-center space-x-2 absolute left-4"
+      >
+        <ArrowLeft size={20} />
+      </button>
+      <h1 className="text-2xl font-bold">Projects</h1>
+    </div>
 
-      {!selectedProject ? (
-        <div className="flex flex-col overflow-y-auto h-[calc(100vh-4rem)]">
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              className="bg-white shadow-lg rounded-lg cursor-pointer m-2"
-              onClick={() => handleProjectClick(project)}
-            >
-              <Carousel
-                infinite
-                showDots
-                autoPlay
-                autoPlaySpeed={3000}
-                containerClass="carousel-container"
-                responsive={{
-                  desktop: { breakpoint: { max: 3000, min: 1024 }, items: 1 },
-                  tablet: { breakpoint: { max: 1024, min: 464 }, items: 1 },
-                  mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
-                }}
-              >
-                {project.images.map((image, index) => (
-                  <img
-                    key={index}
-                    src={image}
-                    alt={`${project.name} ${index + 1}`}
-                    className="w-full h-48 object-cover"
-                  />
-                ))}
-              </Carousel>
-              <div className="p-4">
-                <h2 className="text-xl font-semibold mb-2">{project.name}</h2>
-                <p className="text-gray-600 truncate">{project.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      ) : (
-        <div className="p-6 bg-white shadow-lg rounded-lg h-5/6  overflow-auto">
-          <button
-            onClick={handleCloseDetails}
-            className="bg-red-500 text-white px-4 py-2 rounded mb-4"
+    {/* Scrollable Project List */}
+    {!selectedProject ? (
+      <div className="flex-1 overflow-y-auto">
+        {projects.map((project) => (
+          <div
+            key={project.id}
+            className="bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer m-2"
+            onClick={() => handleProjectClick(project)}
           >
-            Close Details
-          </button>
-          <h2 className="text-2xl font-bold mb-4">{selectedProject.name}</h2>
-          <p className="mb-4">{selectedProject.description}</p>
-          <h3 className="text-lg font-semibold mb-2">Summary:</h3>
-          <ul className="list-disc pl-6 mb-4">
-            {selectedProject.summary.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-          <h3 className="text-lg font-semibold mb-2">Link:</h3>
-          <ul className="list-disc">
-           <a
-                  href={selectedProject.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 underline"
-                >
-                  {selectedProject.link}
-                </a>
-          
-          </ul>
-        </div>
-      )}
-    </div>
-    </div>
+            {/* Carousel */}
+            <Carousel
+              infinite
+              showDots
+              autoPlay
+              autoPlaySpeed={3000}
+              containerClass="carousel-container"
+              responsive={{
+                desktop: { breakpoint: { max: 3000, min: 1024 }, items: 1 },
+                tablet: { breakpoint: { max: 1024, min: 464 }, items: 1 },
+                mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
+              }}
+            >
+              {project.images.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt={`${project.name} ${index + 1}`}
+                  className="w-full h-48 object-cover"
+                />
+              ))}
+            </Carousel>
 
-
+            {/* Name + description */}
+            <div className="p-4 bg-white">
+              <h2 className="text-xl font-bold text-gray-900 mb-2">
+                {project.name}
+              </h2>
+              <p className="text-gray-700">{project.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    ) : (
+      /* Project Details (also scrollable) */
+      <div className="flex-1 overflow-y-auto p-6 bg-white">
+        <button
+          onClick={handleCloseDetails}
+          className="bg-red-500 text-white px-4 py-2 rounded mb-4"
+        >
+          Close Details
+        </button>
+        <h2 className="text-2xl font-bold mb-4">{selectedProject.name}</h2>
+        <p className="mb-4">{selectedProject.description}</p>
+        <h3 className="text-lg font-semibold mb-2">Summary:</h3>
+        <ul className="list-disc pl-6 mb-4">
+          {selectedProject.summary.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+        <h3 className="text-lg font-semibold mb-2">Link:</h3>
+        <a
+          href={selectedProject.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500 underline"
+        >
+          {selectedProject.link}
+        </a>
+      </div>
+    )}
+  </div>
+</div>
   );
 };
 
