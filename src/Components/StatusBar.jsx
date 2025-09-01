@@ -1,6 +1,5 @@
 import React,{useState,useEffect} from 'react'
 import {
-  Wifi,
   Battery,
   Signal,
 } from "lucide-react";
