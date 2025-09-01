@@ -40,7 +40,7 @@ const projects = [
       "Checkout: Integrated payment gateway and cart functionality.",
     ],
     images: [OUD1],
-    link: 'h'
+    link: ''
   },
   {
     id: 3,
