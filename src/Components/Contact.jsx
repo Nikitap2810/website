@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, Linkedin, Github, ArrowLeft } from 'lucide-react';
+import { Mail, Phone, Linkedin,  ArrowLeft } from 'lucide-react';
 // import Photo from '../assets/photo.jpeg'; // Replace with your actual image
 import CV from '../assets/Nikita_Patel_CV.pdf'; // Replace with your actual CV file
 
