@@ -113,7 +113,7 @@ const Projects = ({goBack}) => {
         </div>
 
       {!selectedProject ? (
-        <div className="flex flex-col overflow-y-auto h-[cal(100vh-4rem)]">
+        <div className="flex flex-col overflow-y-auto">
           {projects.map((project) => (
             <div
               key={project.id}
