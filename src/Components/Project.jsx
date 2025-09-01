@@ -99,7 +99,7 @@ const Projects = ({goBack}) => {
   };
 
   return (
-      <div className="min-h-screen w-full bg-gray-100">
+      <<div className="min-h-screen w-full bg-gray-100">
   <div className="h-full w-full bg-white shadow-lg overflow-hidden">
     {/* Header */}
     <div className="bg-blue-500 text-white h-16 flex items-center justify-center relative">
@@ -112,8 +112,9 @@ const Projects = ({goBack}) => {
       <h1 className="text-2xl font-bold">Projects</h1>
     </div>
 
+    {/* Project List */}
     {!selectedProject ? (
-      <div className="flex flex-col overflow-y-auto h-[calc(100vh-4rem)]">
+      <div className="overflow-y-auto h-[calc(100vh-4rem)]">
         {projects.map((project) => (
           <div
             key={project.id}
@@ -142,14 +143,21 @@ const Projects = ({goBack}) => {
                 />
               ))}
             </Carousel>
+
+            {/* Name + Description */}
             <div className="p-4">
-              <h2 className="text-xl font-semibold mb-2">{project.name}</h2>
-              <p className="text-gray-600 truncate">{project.description}</p>
+              <h2 className="text-xl font-semibold mb-2 text-gray-900">
+                {project.name}
+              </h2>
+              <p className="text-gray-600 line-clamp-2">
+                {project.description}
+              </p>
             </div>
           </div>
         ))}
       </div>
     ) : (
+      /* Project Details */
       <div className="p-6 bg-white shadow-lg rounded-lg h-[calc(100vh-4rem)] overflow-y-auto">
         <button
           onClick={handleCloseDetails}
@@ -178,6 +186,7 @@ const Projects = ({goBack}) => {
     )}
   </div>
 </div>
+
 
   );
 };
