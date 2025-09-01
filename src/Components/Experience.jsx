@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Briefcase, Search, Calendar, MapPin, ChevronRight, ArrowLeft, MoreVertical } from "lucide-react";
+import {  Search, Calendar, MapPin, ChevronRight, ArrowLeft, MoreVertical } from "lucide-react";
 
 const ExperienceApp = ({ goBack }) => {
   const [activeView, setActiveView] = useState("list"); // 'list' or 'detail'
